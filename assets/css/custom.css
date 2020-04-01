@@ -71,3 +71,12 @@ pre {
 textarea {
     resize: none;
 }
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+}
+
+.hero {
+    background-color: #f9f9f9;
+}

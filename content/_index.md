@@ -1,10 +1,10 @@
 ---
 title: "Home"
-images: ["feet.jpg"]
+images: ["smiling-baby.jpg"]
 draft: false
 menu: main
 weight: 1
 ---
 
-## doula services
-## in east tennessee
+# Mom's Connection
+## Birth Doula Services in East TN

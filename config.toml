@@ -14,7 +14,7 @@ theme = "terrassa"
     logo = ""
 
 [params.hero]
-    textColor = "#d0f5fc"
+    textColor = "#3badfc"
 
 [params.cta] # Call To Action 
     show = true
