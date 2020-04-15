@@ -1,8 +1,41 @@
 ---
-title : "Doula Benefits"
+title : "What's a Doula?"
 description: ""
 draft: false
+menu: main
 weight: 3
+---
+
+{{< imgs
+    "pure-u-1-2|/images/baby-crying.png|65%"
+    "pure-u-1-2|/images/baby-facing.png"
+>}}
+
+#  
+
+A doula is a trained professional who provides continuous physical, emotional
+and informational support to a mother before, during and shortly after
+childbirth to help her achieve the healthiest, most satisfying experience
+possible.
+
+---
+
+**Always Empowering** — We work to lift people up and enrich the lives others
+  while always celebrating their individuality and uniqueness.  
+
+**Always Investing** — We invest in creating meaningful and lasting
+    relationships with our clients and our community.  
+
+**Always Learning** — We study the ever-changing data and consumer landscape,
+continuously expanding our abilities and working to better ourselves.
+
+**Always Caring** — We stay steady and determined in the face of adversity. We
+lift each other up during challenging times and cheer for one another in
+celebration of success.
+
+**Always Purposeful** — We work together as a unified team to make an impact.
+We are deliberate in our actions and allow our passion to lead the way.
+
 ---
 
 Overall, people who received continuous support were more likely to have

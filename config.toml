@@ -17,7 +17,7 @@ theme = "terrassa"
     textColor = "#3badfc"
 
 [params.cta] # Call To Action 
-    show = true
+    show = false
     cta = "Contact"
     link = "contact" # Relative URL
 
