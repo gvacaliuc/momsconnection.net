@@ -6,11 +6,11 @@ menu: main
 weight: 2
 ---
 
-Hello! My name is Karen, and I am a certified birth and postpartum doula,
+Hello! My name is Karen, and I am a certified birth doula,
 connecting families through birth.  I offer doula services in the Anderson,
 Knox, Morgan, and Roane Counties.  I am passionate about mothers, babies, and
 family.  I also have a deep desire to empower women through positive
-experiences of pregnancy, labor, childbirth, and the postpartum period.
+experiences of pregnancy, labor, and childbirth.
 
 I was born and raised in NH and moved to TN in 2009.  My past jobs have been
 varied and included: administrative assistant, medical biller, costume

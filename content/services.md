@@ -57,5 +57,3 @@ consultation.
 >}}
 
 -->
-
-**calendar to be embedded here?**
