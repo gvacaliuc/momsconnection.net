@@ -11,7 +11,7 @@ theme = "terrassa"
 [params]
     description = "Mom's Connection Doula Services"
     favicon = "favicon.ico"
-    logo = ""
+    logo = "favicon.ico"
 
 [params.hero]
     textColor = "#3badfc"
@@ -58,7 +58,7 @@ theme = "terrassa"
     #instagram = "https://instagram.com/john"
 
 [params.copy] # Copyright
-    copy = "" # Empty for default content
+    copy = "Mom's Connection Doula Services"
 
 [privacy]
     [privacy.googleAnalytics]
