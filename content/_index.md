@@ -5,8 +5,3 @@ draft: false
 menu: main
 weight: 1
 ---
-
-<!--## Mom's Connection -->
-<!--## Doula Services-->
-
-<!--### Birth Doula Services in East TN-->

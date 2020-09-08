@@ -32,6 +32,7 @@ a:hover {
 
 body {
     color: var(--primary-text);
+    font-family: 'Poppins', sans-serif;
 }
 
 figcaption {
@@ -103,4 +104,26 @@ img[src$='#floatright']
     float:right;
     margin: 0.7rem;      /* this margin is totally up to you */
     /* whatever else styles you fancy here */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__title {
+    display: flex;
+    align-self: left;
+    margin: 1rem 3rem;
+}
+
+.menu {
+    margin: 0px;
+    display: flex;
+}
+
+.hamburger-menu {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
 }
