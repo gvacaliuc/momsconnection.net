@@ -7,7 +7,7 @@ menu:
     weight: 3
 
 ---
-{{< imgs "pure-u-1-2|/images/baby-crying.png|65%" "pure-u-1-2|/images/baby-facing.png" >}}
+{{< imgs "pure-u-1-2|/uploads/baby-crying.png|65%" "pure-u-1-2|/uploads/baby-facing.png" >}}
 
 # 
 

@@ -21,8 +21,8 @@ Please reach out to Karen Vacaliuc if you have questions or to discuss a potenti
 * Immediate Postpartum Assistance
 * Postpartum Follow-Up Visit
 
-[Birth Doula Packages](https://app.forestry.io/sites/qqtk7g7eafxxfq/body-media//uploads/birth-doula-packages.pdf)
+[Birth Doula Packages](/uploads/birth-doula-packages.pdf)
 
-<!--{{< imgs "pure-u-1-2|/images/newborn-crying.png" "pure-u-1-2|/images/baby-sleeping-cloth.png" >}}-->
+<!--{{< imgs "pure-u-1-2|/uploads/newborn-crying.png" "pure-u-1-2|/uploads/baby-sleeping-cloth.png" >}}-->
 
-{{< imgs "pure-u-1-2|/images/luke.jpg" "pure-u-1-2|/images/baby-sleeping-bed.png|90%" >}}
+{{< imgs "pure-u-1-2|/uploads/luke.jpg" "pure-u-1-2|/uploads/baby-sleeping-bed.png|90%" >}}

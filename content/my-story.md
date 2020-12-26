@@ -21,4 +21,4 @@ I know that the support I can give to mothers-to-be and their partners, during p
 
 ***
 
-![](/images/baby-sleeping.png#center)
+![](/uploads/baby-sleeping.png#center)

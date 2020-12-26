@@ -20,7 +20,7 @@ https://www.takethemameal.com
 Impact of Doulas on Healthy Birth Outcomes: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3647727/  
 Continuous Labor Support: https://www.ncbi.nlm.nih.gov/pubmed/28681500
 
-![](/images/newborn-sleeping.png#center)
+![](/uploads/newborn-sleeping.png#center)
 
 ## Popular Labor Contraction Apps
 
