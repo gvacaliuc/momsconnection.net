@@ -2,11 +2,9 @@
     <div class="header__title">
         <a href="{{ $.Site.BaseURL }}" class="header__title__link" alt="Home">
             {{ if $.Site.Params.logo }}
-            <div style="width:20%;float:left;">
-              <img src="{{ $.Site.BaseURL }}{{ $.Site.Params.logo }}" class="header__title__logo" alt="{{ $.Site.Title }}">
-            </div>
-            <div style="width:80%;vertical-align:middle;text-align:center;">
-              {{ $.Site.Title }}
+            <img src="{{ $.Site.BaseURL }}{{ $.Site.Params.logo }}" class="header__title__logo" alt="{{ $.Site.Title }}">
+            <div class="header__title__text">
+              <span style="white-space:nowrap;">Mom's Connection</span> <span style="white-space:nowrap;">Doula Services</span>
             </div>
             {{ else }}
             {{ $.Site.Title }}

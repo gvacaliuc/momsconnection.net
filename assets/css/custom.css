@@ -108,22 +108,46 @@ img[src$='#floatright']
 
 .header {
     display: flex;
+    position: absolute;
     justify-content: space-between;
 }
 
 .header__title {
     display: flex;
+    flex: 10;
     align-self: left;
     margin: 1rem 3rem;
 }
 
-.menu {
-    margin: 0px;
+.header__title__link {
     display: flex;
+    align-items: center;
+}
+
+.header__title__logo {
+    flex: 2;
+    max-width: 30%;
+    height: auto;
+}
+
+.header__title__text {
+    flex: 2;
+    margin: 1rem 3rem;
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    flex: 10;
+    margin: 0px;
 }
 
 .hamburger-menu {
     display: flex;
     align-items: center;
     padding: 1.5rem;
+}
+
+.menu__items__item__link {
+    white-space:nowrap;    
 }

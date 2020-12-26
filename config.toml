@@ -51,7 +51,7 @@ theme = "terrassa"
 
 [params.contact] # Contact info
     email = "karen@momsconnection.net"
-    phone = "(865)-219-3913"
+    phone = "(865) 219-3913"
 
 [params.social]
     facebook = "https://www.facebook.com/pg/Moms-Connection-Doula-Services-112331393525109"
