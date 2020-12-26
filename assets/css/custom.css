@@ -20,6 +20,8 @@
     --md: 768px;
     --lg: 992px;
     --xl: 1200px;
+
+    overflow-x: hidden;
 }
 
 a {
@@ -114,7 +116,7 @@ img[src$='#floatright']
 
 .header__title {
     display: flex;
-    flex: 10;
+    flex: 4;
     align-self: left;
     margin: 1rem 3rem;
 }
@@ -126,7 +128,7 @@ img[src$='#floatright']
 
 .header__title__logo {
     flex: 2;
-    max-width: 30%;
+    max-width: 40%;
     height: auto;
 }
 
