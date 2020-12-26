@@ -38,4 +38,8 @@ Check out this PSA by Doulas of North America (DONA) about doula work.
 
 {{< youtube XItvGSq94rU >}}
 
-“Birth is not only about making babies. Birth is about making mothers--strong, competent, capable mothers who trust themselves and know their inner strength.” ― [Barbara Katz Rothman](https://en.wikipedia.org/wiki/Barbara_Katz_Rothman)
+***
+
+“Birth is not only about making babies. Birth is about making mothers--strong, competent, capable mothers who trust themselves and know their inner strength.”
+
+― [Barbara Katz Rothman](https://en.wikipedia.org/wiki/Barbara_Katz_Rothman)
