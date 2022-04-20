@@ -11,18 +11,23 @@ Mom's Connection Doula Services supports hospital, birth center, and home births
 
 Please reach out to Karen Vacaliuc if you have questions or to discuss a potential doula birth!  Please see the forms linked below to begin consultation.
 
+<br />
 ***
+<br />
 
-## Birth Doula Package ($700)
+## Birth Doula Package ($900)
 
 * Prenatal Visits (2)
 * Unlimited Contact by Phone & Email Throughout Pregnancy
 * Continuous Labor Support
 * Immediate Postpartum Assistance
 * Postpartum Follow-Up Visit
+* [Package Details](/uploads/birth-doula-packages.pdf)
 
-[Birth Doula Packages](/uploads/birth-doula-packages.pdf)
+{{< imgs "pure-u-1-1|/uploads/tricare.jpg" >}}
 
-<!--{{< imgs "pure-u-1-2|/uploads/newborn-crying.png" "pure-u-1-2|/uploads/baby-sleeping-cloth.png" >}}-->
+<br />
+***
+<br />
 
-{{< imgs "pure-u-1-2|/uploads/luke.jpg" "pure-u-1-2|/uploads/baby-sleeping-bed.png|90%" >}}
+{{< imgs "pure-u-3-5|/uploads/luke.jpg|85%" "pure-u-2-5|/uploads/baby-sleeping-bed.png" >}}
