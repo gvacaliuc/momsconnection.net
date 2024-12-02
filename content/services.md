@@ -23,6 +23,7 @@ Please reach out to Karen Vacaliuc if you have questions or to discuss a potenti
 * Immediate Postpartum Assistance
 * Postpartum Follow-Up Visit
 * [Package Details](/uploads/birth-doula-packages.pdf)
+* [Lending Library](/uploads/lending-library.pdf)
 
 {{< imgs "pure-u-1-1|/uploads/tricare.jpg" >}}
 

@@ -13,7 +13,7 @@ Hello! My name is Karen Vacaliuc, and I am a birth doula, connecting families th
 
 I was born and raised in New Hampshire and moved to Tennessee in 2009. My past jobs have been varied and include administrative assistant, medical biller, costume designer, short order cook, religious education coordinator, receptionist, seamstress, mother, and wife. All have been fulfilling and creative in their own ways.
 
-I had an epiphany recently: I saw an interview with Melinda Gates and read her book, **_The Power of Lift._** She is passionate about women and the how their empowerment can change the world.  This resonated with me and got me thinking about how I too can empower and help women.
+I had an epiphany recently: I saw an interview with Melinda Gates and read her book, **_The Moment of Lift._** She is passionate about women and the how their empowerment can change the world.  This resonated with me and got me thinking about how I too can empower and help women.
 
 I have three mostly-grown children, all delivered by midwives, two with doula help. Reflecting on my own birth experiences convinced me to begin the certification process with Doulas of North America (DONA) and I am so excited to offer my doula services to mothers and families here in East Tennessee.
 
