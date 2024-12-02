@@ -13,3 +13,4 @@ $RECYCLE.BIN/
 
 # vim
 *.swp
+.hugo_build.lock
