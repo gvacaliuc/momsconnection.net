@@ -15,7 +15,7 @@ Please reach out to Karen Vacaliuc if you have questions or to discuss a potenti
 ***
 <br />
 
-## Birth Doula Package ($900)
+## Birth Doula Package ($1000)
 
 * Prenatal Visits (2)
 * Unlimited Contact by Phone & Email Throughout Pregnancy
