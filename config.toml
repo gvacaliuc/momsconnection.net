@@ -6,7 +6,6 @@ defaultContentLanguage = "en"
 language = "en-US"
 paginate = 3
 
-theme = "terrassa"
 
 [params]
     description = "Mom's Connection Doula Services"
