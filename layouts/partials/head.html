@@ -11,12 +11,12 @@
 
 	{{ hugo.Generator }}
 
-	{{ if .Site.GoogleAnalytics }}
+	{{ with .Site.Config.Services.GoogleAnalytics.ID }}
 	{{ template "_internal/google_analytics.html" . }}
 	{{ end }}
 
-	{{ template "_internal/twitter_cards.html" . }}
-	{{ template "_internal/opengraph.html" . }}
+	{{ partial "twitter_cards.html" . }}
+	{{ partial "opengraph.html" . }}
 
 	<!-- CSS -->
 	{{ partial "styles.html" . }}

@@ -1,6 +1,9 @@
 ---
 title: My Story
 description: ''
+summary: |
+  Hello! My name is Karen Vacaliuc, and I am a birth doula, connecting families through birth. I offer doula services in the Anderson, Knox, Morgan, and Roane Counties. I am passionate about mothers, babies, and family. I also have a deep desire to empower women through positive experiences of pregnancy, labor, and childbirth.
+  I was born and raised in New Hampshire and moved to Tennessee in 2009. My past jobs have been varied and include administrative assistant, medical biller, costume designer, short order cook, religious education coordinator, receptionist, seamstress, mother, and wife.
 weight: "2"
 menu:
   main:

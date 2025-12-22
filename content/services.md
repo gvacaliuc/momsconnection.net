@@ -1,6 +1,8 @@
 ---
 title: Services
 description: ''
+summary: |
+  Mom’s Connection Doula Services supports hospital, birth center, and home births in the Knoxville area. We support all of your family’s birth and baby choices and will help your family gain understanding and confidence during this amazing and exciting time. We can offer daytime and overnight postpartum care. We will offer care for singles, multiples, first babies, and larger families. We support your entire family to make the transition as positive and low stress as possible.
 weight: "4"
 menu:
   main:

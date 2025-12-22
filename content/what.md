@@ -1,6 +1,10 @@
 ---
 title: What's a Doula?
 description: ''
+summary: |
+  A doula is a trained professional who provides continuous physical, emotional and informational support to a mother before, during and shortly after childbirth to help her achieve the healthiest, most satisfying experience possible.
+  Always Empowering — We work to lift people up and enrich the lives others while always celebrating their individuality and uniqueness.
+  Always Investing — We invest in creating meaningful and lasting relationships with our clients and our community.
 weight: "3"
 menu:
   main:

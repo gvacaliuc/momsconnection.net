@@ -1,10 +1,9 @@
 baseurl = "/"
 title = "Mom's Connection Doula Services"
 author = "Karen Vacaliuc"
-googleAnalytics = ""
 defaultContentLanguage = "en"
 language = "en-US"
-paginate = 3
+summaryLength = 92
 
 
 [params]
@@ -65,3 +64,15 @@ paginate = 3
         disable = false
         respectDoNotTrack = true
         useSessionStorage = false
+
+[pagination]
+    pagerSize = 3
+
+[services]
+    [services.googleAnalytics]
+        id = ""
+
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.parser]
+            autoHeadingIDType = "blackfriday"

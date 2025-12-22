@@ -1,0 +1,22 @@
+{{- $title := .Title -}}
+{{- $desc := "" -}}
+{{- if .Description -}}
+  {{- $desc = .Description -}}
+{{- else if .Summary -}}
+  {{- $desc = .Summary | plainify -}}
+{{- else -}}
+  {{- $desc = .Site.Params.description -}}
+{{- end -}}
+{{- $desc = $desc | strings.TrimSpace -}}
+{{- $image := "" -}}
+{{- with .Params.images -}}
+  {{- $image = index . 0 -}}
+{{- end -}}
+
+<meta property="og:title" content="{{ $title }}" />
+<meta property="og:description" content="{{ $desc }}" />
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta property="og:url" content="{{ .RelPermalink }}" />{{ if .IsPage }}<meta property="article:section" content="{{ .Section }}" />{{ end }}
+{{- if $image -}}
+<meta property="og:image" content="{{ $image | relURL }}" />
+{{- end }}
