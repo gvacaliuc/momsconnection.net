@@ -1,4 +1,50 @@
 {{ define "main" }}
-{{ partial "hero.html" . }}
-{{ partial "sections.html" . }}
+<div class="page">
+    <section class="hero">
+        <div class="hero__image" style="background-image: url('{{ .Params.hero.image | relURL }}');">
+            <h1 class="hero__title">{{ .Params.hero.title }}</h1>
+        </div>
+    </section>
+
+    <section class="section mission">
+        <div class="section__inner">
+            <h2 class="section__title">{{ .Params.mission.title }}</h2>
+            <p class="mission__text">{{ .Params.mission.body }}</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section__inner split">
+            <div>
+                <div class="flower-row">
+                    <span class="flower flower--teal"></span>
+                    <span class="flower flower--lavender"></span>
+                    <span class="flower flower--sage"></span>
+                </div>
+                <h3 class="section__title">{{ .Params.whats.title }}</h3>
+                <p class="section__lede">{{ .Params.whats.body }}</p>
+            </div>
+            <div class="media">
+                <img src="{{ .Params.whats.image | relURL }}" alt="{{ .Params.whats.imageAlt }}">
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--tight">
+        <div class="section__inner split">
+            <div class="media">
+                <img src="{{ .Params.benefits.image | relURL }}" alt="{{ .Params.benefits.imageAlt }}">
+            </div>
+            <div>
+                <h3 class="section__title">{{ .Params.benefits.title }}</h3>
+                <p class="section__lede">{{ .Params.benefits.body }}</p>
+                <div class="flower-row">
+                    <span class="flower flower--teal"></span>
+                    <span class="flower flower--butter"></span>
+                    <span class="flower flower--sage"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
 {{ end }}

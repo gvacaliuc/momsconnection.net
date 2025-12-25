@@ -6,9 +6,6 @@ summary: |
   Always Empowering — We work to lift people up and enrich the lives others while always celebrating their individuality and uniqueness.
   Always Investing — We invest in creating meaningful and lasting relationships with our clients and our community.
 weight: "3"
-menu:
-  main:
-    weight: 3
 
 ---
 {{< imgs "pure-u-1-2|/uploads/baby-crying.png|65%" "pure-u-1-2|/uploads/baby-facing.png" >}}

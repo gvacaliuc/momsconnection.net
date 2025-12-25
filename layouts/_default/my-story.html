@@ -1,0 +1,40 @@
+{{ define "main" }}
+<div class="page">
+    <section class="section">
+        <div class="section__inner split">
+            <div class="media">
+                <img src="{{ .Params.intro.image | relURL }}" alt="{{ .Params.intro.imageAlt }}">
+            </div>
+            <div>
+                <h2 class="section__title">{{ .Params.intro.title }}</h2>
+                <p class="section__lede">{{ .Params.intro.body }}</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--tight">
+        <div class="section__inner split">
+            <div>
+                <h2 class="section__title">{{ .Params.history.title }}</h2>
+                <p class="section__lede">{{ .Params.history.body }}</p>
+            </div>
+            <div class="badge-stack">
+                {{ range .Params.history.badges }}
+                <img src="{{ .image | relURL }}" alt="{{ .alt }}">
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section__inner">
+            <h2 class="section__title">{{ .Params.clients.title }}</h2>
+            <div class="clients-frame">
+                <img src="{{ .Params.clients.image | relURL }}" alt="{{ .Params.clients.imageAlt }}">
+                <span class="clients-frame__arrow clients-frame__arrow--left">‹</span>
+                <span class="clients-frame__arrow clients-frame__arrow--right">›</span>
+            </div>
+        </div>
+    </section>
+</div>
+{{ end }}

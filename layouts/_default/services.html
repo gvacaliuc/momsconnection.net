@@ -1,0 +1,71 @@
+{{ define "main" }}
+<div class="page">
+    <section class="section">
+        <div class="section__inner services-grid">
+            <div class="media">
+                <img src="{{ .Params.intro.image | relURL }}" alt="{{ .Params.intro.imageAlt }}">
+            </div>
+            <div>
+                <h2 class="section__title">{{ .Params.intro.title }}</h2>
+                <p class="section__lede">{{ .Params.intro.body }}</p>
+                <ul class="service-list">
+                    {{ range .Params.intro.bullets }}
+                    <li>{{ . }}</li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section__inner">
+            <h2 class="section__title">{{ .Params.packages.title }}</h2>
+            <div class="flower-row">
+                <span class="flower flower--teal"></span>
+                <span class="flower flower--lavender"></span>
+                <span class="flower flower--sage"></span>
+            </div>
+            <div class="package-grid">
+                {{ range .Params.packages.items }}
+                <div class="package package--{{ .tone }}">
+                    <div class="package__title">{{ .name }}</div>
+                    <ul class="service-list">
+                        {{ range .details }}
+                        <li>{{ . }}</li>
+                        {{ end }}
+                    </ul>
+                    {{ if .price }}
+                    <div class="package__price">{{ .price }}</div>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--tight">
+        <div class="section__inner">
+            <h2 class="section__title">{{ .Params.insurance.title }}</h2>
+            <p class="section__lede">{{ .Params.insurance.body }}</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section__inner">
+            <h2 class="section__title">{{ .Params.contact.title }}</h2>
+            <form class="card">
+                <div class="form-grid">
+                    <input type="text" name="name" placeholder="Name" />
+                    <input type="text" name="phone" placeholder="Phone" />
+                    <input type="email" name="email" placeholder="Email" />
+                    <input type="text" name="date" placeholder="Due Date" />
+                    <textarea name="message" placeholder="Message"></textarea>
+                </div>
+                <div style="text-align:center; margin-top: 16px;">
+                    <button type="submit">Send</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
+{{ end }}

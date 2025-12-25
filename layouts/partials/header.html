@@ -1,17 +1,25 @@
-<header class="header">
-    <div class="header__title">
-        <a href="{{ $.Site.BaseURL }}" class="header__title__link" alt="Home">
+<header class="site-header">
+    <div class="site-header__inner">
+        <a href="{{ $.Site.BaseURL }}" class="brand" aria-label="{{ $.Site.Title }}">
             {{ if $.Site.Params.logo }}
-            <img src="{{ $.Site.BaseURL }}{{ $.Site.Params.logo }}" class="header__title__logo" alt="{{ $.Site.Title }}">
-            <div class="header__title__text">
-              <span style="white-space:nowrap;">Mom's Connection</span> <span style="white-space:nowrap;">Doula Services</span>
-            </div>
-            {{ else }}
-            {{ $.Site.Title }}
+            <img src="{{ $.Site.BaseURL }}{{ $.Site.Params.logo }}" class="brand__logo" alt="{{ $.Site.Title }}">
             {{ end }}
+            <span class="brand__text">
+                <span class="brand__name">Mom's Connection</span>
+                <span class="brand__tag">Doula Services</span>
+            </span>
         </a>
-    </div>
 
-    {{ partial "menu.html" . }}
-    {{ partial "hamburger-menu.html" . }}
+        <nav class="site-nav" aria-label="Primary">
+            <ul class="site-nav__list">
+                {{ range $.Site.Menus.main }}
+                <li class="site-nav__item">
+                    <a class="site-nav__link{{ if $.Page.IsMenuCurrent "main" . }} is-active{{ end }}" href="{{ .URL }}">
+                        {{ .Name | default .Title }}
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </nav>
+    </div>
 </header>
