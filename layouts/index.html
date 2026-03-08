@@ -14,34 +14,30 @@
     </section>
 
     <section class="section">
-        <div class="section__inner split">
-            <div>
+        <div class="section__inner split split--feature">
+            <div class="feature-text">
                 <div class="flower-row">
-                    <span class="flower flower--teal"></span>
-                    <span class="flower flower--lavender"></span>
-                    <span class="flower flower--sage"></span>
+                    <img class="flower-cluster" src="/images/brand-flowers-cluster.png" alt="Flower icons">
                 </div>
                 <h3 class="section__title">{{ .Params.whats.title }}</h3>
                 <p class="section__lede">{{ .Params.whats.body }}</p>
             </div>
-            <div class="media">
+            <div class="media media--small media--right">
                 <img src="{{ .Params.whats.image | relURL }}" alt="{{ .Params.whats.imageAlt }}">
             </div>
         </div>
     </section>
 
     <section class="section section--tight">
-        <div class="section__inner split">
-            <div class="media">
+        <div class="section__inner split split--feature">
+            <div class="media media--small media--left">
                 <img src="{{ .Params.benefits.image | relURL }}" alt="{{ .Params.benefits.imageAlt }}">
             </div>
-            <div>
+            <div class="feature-text">
                 <h3 class="section__title">{{ .Params.benefits.title }}</h3>
                 <p class="section__lede">{{ .Params.benefits.body }}</p>
-                <div class="flower-row">
-                    <span class="flower flower--teal"></span>
-                    <span class="flower flower--butter"></span>
-                    <span class="flower flower--sage"></span>
+                <div class="flower-row flower-row--benefits">
+                    <img class="flower-cluster flower-cluster--small" src="/images/brand-flowers-cluster.png" alt="Flower icons">
                 </div>
             </div>
         </div>

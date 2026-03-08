@@ -25,8 +25,8 @@ apps:
 support:
   title: "Postpartum Support"
   body: "Online support for postpartum, helps when folks say “how can I help?”"
-  image: "/uploads/newborn-sleeping.png"
-  imageAlt: "Baby resting in a blanket"
+  image: "/images/father-changing-baby.jpg"
+  imageAlt: "Newborn held in hands"
   links:
     - label: "Give In Kind"
       url: "https://www.giveinkind.com"

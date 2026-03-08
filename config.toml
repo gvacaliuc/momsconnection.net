@@ -9,7 +9,8 @@ summaryLength = 92
 [params]
     description = "Mom's Connection Doula Services"
     favicon = "favicon.ico"
-    logo = "logo.svg"
+    logo = "images/logo-wordmark.png"
+    logo_mark = "images/logo-mark.png"
 
 [params.hero]
     textColor = "#3badfc"

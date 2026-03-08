@@ -12,7 +12,7 @@ menu:
 intro:
   title: "Our Services"
   body: "Mom’s Connection Doula Services supports hospital, birth center, and home births in the Knoxville area. We support all of your family’s birth and baby choices and will help your family gain understanding and confidence during this amazing and exciting time."
-  image: "/uploads/baby-sleeping-bed.png"
+  image: "/images/pregnant-on-birthing-ball.jpg"
   imageAlt: "Parents holding their newborn"
   bullets:
     - "VBACs and HBACs"
