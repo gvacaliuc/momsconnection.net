@@ -2,18 +2,16 @@
 
 ## Project Structure & Module Organization
 - `content/` holds site pages, blog posts, and sections with Hugo front matter.
-- `layouts/` contains site templates and partials that override theme defaults.
-- `themes/terrassa/` is the Hugo theme (git submodule).
-- `assets/` is for pipeline assets (e.g., `assets/css/custom.css`).
+- `layouts/` contains site templates and partials for the current custom site.
+- `assets/` is for pipeline assets (e.g., `assets/css/redesign.css`).
 - `static/` hosts files copied directly to the site root (images, downloads).
 - `public/` is the Hugo build output (generated; do not edit by hand).
 
 ## Build, Test, and Development Commands
-- `git submodule update --init` initializes the theme submodule (run once or after cloning).
 - `hugo serve` runs the local dev server with live reload at `http://localhost:1313`.
 - `hugo` builds the production site into `public/`.
 
-Note: this project requires Hugo `v0.119.0` or earlier.
+Note: this project is currently running on Hugo `v0.153.1`.
 
 ## Coding Style & Naming Conventions
 - Content files use Hugo front matter in Markdown; keep keys lower-case and consistent.

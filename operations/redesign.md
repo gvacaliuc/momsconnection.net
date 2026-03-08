@@ -3,8 +3,7 @@
 ## 0) Baseline Snapshot (Current State)
 **Goal:** establish a reference build for HTML parity checks.
 - Commands:
-  - `git submodule update --init`
-  - `hugo version` (confirm `<= v0.119.0`)
+  - `hugo version` (confirm `>= v0.153.1`)
   - `hugo --minify` (or `hugo` if minify not used)
   - `cp -R public public.baseline`
 - Success criteria:
@@ -78,7 +77,7 @@
 
 ## 6) Visual Build-out (Desktop Fidelity)
 **Goal:** match the comps with practical improvements.
-- Implement CSS in `assets/css/custom.css` (or SCSS if enabled).
+- Implement CSS in `assets/css/redesign.css` (or SCSS if enabled).
 - Include only necessary images in `static/` and optimize sizing.
 - Acceptable simplifications:
   - If a design element is unclear or inconsistent, use a clean, consistent pattern.
