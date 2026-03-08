@@ -6,7 +6,7 @@
             {{ end }}
         </a>
 
-        <nav class="site-nav" aria-label="Primary">
+        <nav class="site-nav site-nav--desktop" aria-label="Primary">
             <ul class="site-nav__list">
                 {{ range $.Site.Menus.main }}
                 <li class="site-nav__item">
@@ -17,5 +17,23 @@
                 {{ end }}
             </ul>
         </nav>
+
+        <details class="mobile-nav">
+            <summary class="mobile-nav__summary" aria-label="Open menu">
+                <span class="mobile-nav__label">Menu</span>
+                <span class="mobile-nav__icon" aria-hidden="true"></span>
+            </summary>
+            <nav class="site-nav site-nav--mobile" aria-label="Mobile Primary">
+                <ul class="site-nav__list site-nav__list--mobile">
+                    {{ range $.Site.Menus.main }}
+                    <li class="site-nav__item">
+                        <a class="site-nav__link site-nav__link--mobile{{ if $.Page.IsMenuCurrent "main" . }} is-active{{ end }}" href="{{ .URL }}">
+                            {{ .Name | default .Title }}
+                        </a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </nav>
+        </details>
     </div>
 </header>
