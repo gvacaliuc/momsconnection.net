@@ -676,11 +676,28 @@ button {
 @media (max-width: 900px) {
   .site-header__inner {
     padding: 10px 16px;
-    gap: 10px;
+    gap: 14px;
   }
 
   .brand__logo {
     width: 132px;
+  }
+
+  .site-nav__list {
+    gap: 16px;
+  }
+
+  .site-nav__link {
+    font-size: 0.92rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-header__inner {
+    position: relative;
+    padding: 8px 12px;
+    min-height: 56px;
+    gap: 10px;
   }
 
   .site-nav--desktop {
@@ -689,24 +706,19 @@ button {
 
   .mobile-nav {
     display: block;
-    width: 100%;
-    position: relative;
+    position: static;
   }
 
   .mobile-nav__summary {
-    width: 100%;
-    border: 1px solid #d5dee5;
-    border-radius: 12px;
-    background: #fff;
-    min-height: 44px;
-    padding: 10px 12px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 10px;
+    background: transparent;
+    display: grid;
+    place-items: center;
     cursor: pointer;
     color: var(--brand-dark);
-    font-weight: 700;
-    font-size: 0.95rem;
   }
 
   .mobile-nav__icon {
@@ -752,27 +764,37 @@ button {
 
   .site-nav--mobile {
     position: absolute;
-    top: calc(100% + 6px);
-    left: 0;
-    right: 0;
+    top: calc(100% + 1px);
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
     background: #fff;
-    border: 1px solid #d5dee5;
-    border-radius: 12px;
-    box-shadow: var(--shadow);
+    border-top: 1px solid #d5dee5;
+    border-bottom: 1px solid #d5dee5;
+    box-shadow: 0 12px 28px rgba(16, 24, 40, 0.08);
     z-index: 120;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.18s ease;
+  }
+
+  .mobile-nav[open] .site-nav--mobile {
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .site-nav__list--mobile {
     display: grid;
     gap: 0;
-    padding: 8px;
+    padding: 8px 12px 10px;
   }
 
   .site-nav__link--mobile {
     display: block;
-    font-size: 1.02rem;
-    padding: 11px 10px;
-    border-radius: 9px;
+    font-size: 1rem;
+    padding: 12px 4px;
+    border-radius: 8px;
+    font-weight: 600;
   }
 
   .site-nav__link--mobile::after {
@@ -782,6 +804,10 @@ button {
   .site-nav__link--mobile:hover,
   .site-nav__link--mobile.is-active {
     background: #edf5f9;
+  }
+
+  .brand__logo {
+    width: 118px;
   }
 
   .split,
@@ -861,24 +887,14 @@ button {
 }
 
 @media (max-width: 420px) {
-  .site-header__inner {
-    padding: 8px 12px;
-    gap: 8px;
-  }
-
-  .brand__logo {
-    width: 118px;
-  }
-
   .mobile-nav__summary {
-    min-height: 42px;
-    padding: 9px 10px;
-    font-size: 0.9rem;
+    width: 36px;
+    height: 36px;
   }
 
   .site-nav__link--mobile {
     font-size: 0.9rem;
-    padding: 10px 9px;
+    padding: 11px 4px;
   }
 
   .section {
