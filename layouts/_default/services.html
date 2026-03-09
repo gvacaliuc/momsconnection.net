@@ -16,11 +16,6 @@
                 <div class="services-intro__support">
                     <div class="services-intro__support-head">
                         <h3 class="services-intro__support-title">Our birth support includes:</h3>
-                        <div class="flower-row services-packages__flowers services-packages__flowers--intro">
-                            <img src="/images/brand-flower-navy.png" alt="Flower icon">
-                            <img src="/images/brand-flower-teal.png" alt="Flower icon">
-                            <img src="/images/brand-flower-green.png" alt="Flower icon">
-                        </div>
                     </div>
                     <ul class="service-list">
                         {{ range $introBullets }}
@@ -61,11 +56,26 @@
             {{ partial "components/section-heading.html" (dict "title" .Params.contact.title) }}
             <form class="card services-contact__card">
                 <div class="form-grid">
-                    <input type="text" name="name" placeholder="Name" />
-                    <input type="text" name="phone" placeholder="Phone" />
-                    <input type="email" name="email" placeholder="Email" />
-                    <input type="text" name="date" placeholder="Due Date" />
-                    <textarea name="message" placeholder="Message"></textarea>
+                    <label class="form-field">
+                        <span class="form-field__label">Name</span>
+                        <input type="text" name="name" />
+                    </label>
+                    <label class="form-field">
+                        <span class="form-field__label">Phone</span>
+                        <input type="text" name="phone" />
+                    </label>
+                    <label class="form-field">
+                        <span class="form-field__label">Email</span>
+                        <input type="email" name="email" />
+                    </label>
+                    <label class="form-field">
+                        <span class="form-field__label">Due Date</span>
+                        <input type="text" name="date" />
+                    </label>
+                    <label class="form-field form-field--full">
+                        <span class="form-field__label">Message</span>
+                        <textarea name="message"></textarea>
+                    </label>
                 </div>
                 <div style="text-align:center; margin-top: 16px;">
                     <button type="submit">Send</button>

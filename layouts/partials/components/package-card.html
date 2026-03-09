@@ -1,11 +1,13 @@
 <div class="package package--{{ .tone }}">
-    <div class="package__title">{{ .name }}</div>
+    <div class="package__head">
+        <div class="package__title">{{ .name }}</div>
+        {{ with .price }}
+        <div class="package__price-pill">{{ . }}</div>
+        {{ end }}
+    </div>
     <ul class="service-list">
         {{ range .details }}
         <li>{{ . }}</li>
         {{ end }}
     </ul>
-    {{ with .price }}
-    <div class="package__price">{{ . }}</div>
-    {{ end }}
 </div>
