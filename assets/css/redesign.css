@@ -499,6 +499,7 @@ a {
 
 .services-intro__media {
   max-width: 470px;
+  border-radius: 8px;
 }
 
 .services-intro__support {
@@ -506,7 +507,7 @@ a {
   gap: 8px;
   background: #f2f5f8;
   border: 1px solid #dbe4eb;
-  border-radius: 14px;
+  border-radius: 8px;
   padding: 14px 16px;
 }
 
