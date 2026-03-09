@@ -711,6 +711,11 @@ button {
 }
 
 @media (max-width: 600px) {
+  .section,
+  .section--tight {
+    padding: 32px 16px;
+  }
+
   .site-header__inner {
     position: relative;
     padding: 8px 12px;
@@ -857,6 +862,14 @@ button {
     margin: 0;
   }
 
+  .mission.section {
+    padding-bottom: 0;
+  }
+
+  .mission .section__inner {
+    padding-bottom: 18px;
+  }
+
   .services-grid--intro {
     gap: 14px;
   }
@@ -904,7 +917,7 @@ button {
   }
 }
 
-@media (max-width: 700px) {
+@media (min-width: 601px) and (max-width: 700px) {
   .section {
     padding: 44px 16px;
   }
@@ -977,8 +990,9 @@ button {
     padding: 11px 4px;
   }
 
-  .section {
-    padding: 36px 12px;
+  .section,
+  .section--tight {
+    padding: 28px 12px;
   }
 
   .section__title {
