@@ -542,13 +542,14 @@ a {
 }
 
 .services-page .package-grid {
-  gap: 10px;
+  gap: 16px;
 }
 
 .services-page .package {
   padding: 14px 16px;
   border-width: 0;
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  border-radius: 8px;
 }
 
 .package__head {
@@ -596,7 +597,7 @@ a {
   align-items: center;
   justify-content: center;
   padding: 5px 9px;
-  border-radius: 999px;
+  border-radius: 8px;
   font-size: 0.8rem;
   font-weight: 700;
   color: var(--brand-dark);
@@ -1078,11 +1079,12 @@ button {
   }
 
   .package-grid {
-    gap: 10px;
+    gap: 12px;
   }
 
   .package {
     padding: 12px 12px;
+    border-radius: 8px;
   }
 
   .services-page .package .service-list li {
