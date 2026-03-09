@@ -1,0 +1,34 @@
+intro_bullets:
+  - "VBACs and HBACs"
+  - "Home births"
+  - "Birth with or without pain medication"
+  - "Water births"
+  - "Support for singles, multiples, and larger families"
+
+package_items:
+  - name: "Silver Package"
+    tone: "sage"
+    details:
+      - "Two prenatal visits and ongoing check-ins"
+      - "Unlimited contact throughout pregnancy"
+      - "Continuous labor support and immediate postpartum care"
+      - "One postpartum follow-up visit"
+    price: "$1000"
+  - name: "Gold Package"
+    tone: "teal"
+    details:
+      - "All Silver Package benefits"
+      - "Additional prenatal visit(s) for special needs or care"
+    price: "$1050"
+  - name: "Prenatal Massages"
+    tone: "lavender"
+    details:
+      - "We have a Licensed Massage Therapist (LMT) that works with our clients"
+      - "Each session is 60 minutes and tailored to your needs"
+    price: "$100/Session"
+  - name: "Reduced Rate"
+    tone: "stone"
+    details:
+      - "If you’re in a financial hardship, please let me know."
+      - "You will receive the same care but at a reduced rate."
+    price: "$350"
