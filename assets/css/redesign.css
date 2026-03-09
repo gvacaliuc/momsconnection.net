@@ -874,6 +874,18 @@ button {
   .package {
     padding: 12px 12px;
   }
+
+  .feature-text .flower-cluster {
+    width: 140px;
+  }
+
+  .feature-text .flower-cluster--small {
+    width: 112px;
+  }
+
+  .feature-text .flower-row {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 700px) {
@@ -970,5 +982,13 @@ button {
   .flower-cluster,
   .flower-cluster--small {
     width: 64px;
+  }
+
+  .feature-text .flower-cluster {
+    width: 128px;
+  }
+
+  .feature-text .flower-cluster--small {
+    width: 96px;
   }
 }
