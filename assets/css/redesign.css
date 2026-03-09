@@ -886,6 +886,10 @@ button {
   .feature-text .flower-row {
     justify-content: center;
   }
+
+  .feature-text .flower-row:not(.flower-row--benefits) {
+    display: none;
+  }
 }
 
 @media (max-width: 700px) {
