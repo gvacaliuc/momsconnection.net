@@ -139,17 +139,17 @@ a {
   }
 
   .my-story__intro-text {
+    position: relative;
     padding-top: 0;
+    padding-right: 110px;
   }
 
   .my-story__flower-sprite {
-    width: 120px;
-    position: static;
-    margin: 0 0 12px;
-  }
-
-  .my-story__intro-text {
-    padding-right: 0;
+    position: absolute;
+    top: 2px;
+    right: 0;
+    width: 96px;
+    margin: 0;
   }
 
   .section {
@@ -942,13 +942,17 @@ button {
   }
 
   .my-story__intro-text {
+    position: relative;
     padding-top: 0;
+    padding-right: 110px;
   }
 
   .my-story__flower-sprite {
-    position: static;
-    width: 120px;
-    margin: 0 0 12px;
+    position: absolute;
+    top: 2px;
+    right: 0;
+    width: 96px;
+    margin: 0;
   }
 
   .mission {
