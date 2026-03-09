@@ -471,14 +471,94 @@ a {
   max-width: 62ch;
 }
 
+.services-page .section {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.services-page .section--tight {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+.services-intro {
+  padding-bottom: 28px;
+}
+
+.services-intro__copy .section__title,
+.services-page .section__title {
+  margin-bottom: 10px;
+}
+
+.services-intro__details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+  align-items: start;
+}
+
+.services-intro__media {
+  max-width: 470px;
+}
+
+.services-intro__support {
+  display: grid;
+  gap: 10px;
+}
+
+.services-intro__support-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.services-intro__support-title {
+  font-size: 1rem;
+  color: var(--brand-dark);
+}
+
+.services-intro__note {
+  margin: 0;
+  font-size: 0.98rem;
+}
+
 .services-packages__flowers {
   gap: 10px;
-  margin: 8px 0 16px;
+  margin: 8px 0 14px;
 }
 
 .services-packages__flowers img {
-  width: 96px;
+  width: 54px;
   height: auto;
+}
+
+.services-packages__flowers--intro {
+  margin: 0;
+}
+
+.services-packages__flowers--intro img {
+  width: 34px;
+}
+
+.services-page .package-grid {
+  gap: 12px;
+}
+
+.services-page .package {
+  padding: 14px 16px;
+}
+
+.services-page .package .service-list li {
+  margin-bottom: 6px;
+}
+
+.services-insurance .section__lede {
+  max-width: 90ch;
+}
+
+.services-contact__card {
+  padding: 18px;
 }
 
 .service-list {
@@ -847,7 +927,18 @@ button {
   }
 
   .services-intro {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+
+  .services-page .section {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  .services-page .section--tight {
     padding-top: 24px;
+    padding-bottom: 24px;
   }
 
   .mission {
@@ -870,21 +961,35 @@ button {
     padding-bottom: 18px;
   }
 
-  .services-grid--intro {
-    gap: 14px;
+  .services-intro__details {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 
-  .services-intro__text .section__title {
-    margin-bottom: 8px;
+  .services-intro__media {
+    max-width: none;
   }
 
-  .services-intro__text .section__lede {
+  .services-intro__support {
+    gap: 8px;
+  }
+
+  .services-intro__support-head {
+    align-items: flex-start;
+  }
+
+  .services-intro__support-title {
+    font-size: 0.95rem;
+  }
+
+  .services-intro__copy .section__lede,
+  .services-intro__note {
     font-size: 0.95rem;
     line-height: 1.5;
   }
 
   .services-packages__flowers {
-    margin: 4px 0 10px;
+    margin: 6px 0 10px;
     gap: 8px;
   }
 
@@ -898,6 +1003,14 @@ button {
 
   .package {
     padding: 12px 12px;
+  }
+
+  .services-page .package .service-list li {
+    margin-bottom: 4px;
+  }
+
+  .services-contact__card {
+    padding: 12px;
   }
 
   .feature-text .flower-cluster {
@@ -936,6 +1049,26 @@ button {
   .site-footer__contact {
     font-size: 1rem;
     line-height: 1.55;
+  }
+
+  .mission {
+    text-align: left;
+  }
+
+  .mission .section__title {
+    text-align: left;
+  }
+
+  .mission__text {
+    margin: 0;
+  }
+
+  .mission.section {
+    padding-bottom: 0;
+  }
+
+  .mission .section__inner {
+    padding-bottom: 18px;
   }
 
   .hero__image {
