@@ -141,7 +141,7 @@ a {
   .my-story__intro-text {
     position: relative;
     padding-top: 0;
-    padding-right: 110px;
+    padding-right: 0;
   }
 
   .my-story__flower-sprite {
@@ -931,6 +931,10 @@ button {
     padding-bottom: 18px;
   }
 
+  .my-story__intro-text .section__title {
+    padding-right: 110px;
+  }
+
   .services-page .section {
     padding-top: 28px;
     padding-bottom: 28px;
@@ -944,7 +948,7 @@ button {
   .my-story__intro-text {
     position: relative;
     padding-top: 0;
-    padding-right: 110px;
+    padding-right: 0;
   }
 
   .my-story__flower-sprite {
@@ -953,6 +957,10 @@ button {
     right: 0;
     width: 96px;
     margin: 0;
+  }
+
+  .my-story__intro-text .section__title {
+    padding-right: 110px;
   }
 
   .mission {
