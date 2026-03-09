@@ -8,39 +8,30 @@
 
     <section class="section mission">
         <div class="section__inner">
-            <h2 class="section__title">{{ .Params.mission.title }}</h2>
+            {{ partial "components/section-heading.html" (dict "title" .Params.mission.title) }}
             <p class="mission__text">{{ .Params.mission.body }}</p>
         </div>
     </section>
 
-    <section class="section">
-        <div class="section__inner split split--feature">
-            <div class="feature-text">
-                <div class="flower-row">
-                    <img class="flower-cluster" src="/images/brand-flowers-cluster.png" alt="Flower icons">
-                </div>
-                <h3 class="section__title">{{ .Params.whats.title }}</h3>
-                <p class="section__lede">{{ .Params.whats.body }}</p>
-            </div>
-            <div class="media media--small media--right">
-                <img src="{{ .Params.whats.image | relURL }}" alt="{{ .Params.whats.imageAlt }}">
-            </div>
-        </div>
-    </section>
+    {{ partial "components/home-feature.html" (dict
+    "sectionClass" "section"
+    "title" .Params.whats.title
+    "body" .Params.whats.body
+    "image" .Params.whats.image
+    "imageAlt" .Params.whats.imageAlt
+    "mediaClass" "media--right"
+    "flowersTop" true
+    ) }}
 
-    <section class="section section--tight">
-        <div class="section__inner split split--feature">
-            <div class="media media--small media--left">
-                <img src="{{ .Params.benefits.image | relURL }}" alt="{{ .Params.benefits.imageAlt }}">
-            </div>
-            <div class="feature-text">
-                <h3 class="section__title">{{ .Params.benefits.title }}</h3>
-                <p class="section__lede">{{ .Params.benefits.body }}</p>
-                <div class="flower-row flower-row--benefits">
-                    <img class="flower-cluster flower-cluster--small" src="/images/brand-flowers-cluster.png" alt="Flower icons">
-                </div>
-            </div>
-        </div>
-    </section>
+    {{ partial "components/home-feature.html" (dict
+    "sectionClass" "section section--tight"
+    "title" .Params.benefits.title
+    "body" .Params.benefits.body
+    "image" .Params.benefits.image
+    "imageAlt" .Params.benefits.imageAlt
+    "mediaClass" "media--left"
+    "imageFirst" true
+    "flowersBottom" true
+    ) }}
 </div>
 {{ end }}

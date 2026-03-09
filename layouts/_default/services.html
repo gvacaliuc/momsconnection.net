@@ -1,4 +1,7 @@
 {{ define "main" }}
+{{ $servicesData := site.Data.services }}
+{{ $introBullets := default $servicesData.intro_bullets .Params.intro.bullets }}
+{{ $packageItems := default $servicesData.package_items .Params.packages.items }}
 <div class="page">
     <section class="section">
         <div class="section__inner services-grid">
@@ -6,10 +9,9 @@
                 <img src="{{ .Params.intro.image | relURL }}" alt="{{ .Params.intro.imageAlt }}">
             </div>
             <div>
-                <h2 class="section__title">{{ .Params.intro.title }}</h2>
-                <p class="section__lede">{{ .Params.intro.body }}</p>
+                {{ partial "components/section-heading.html" (dict "title" .Params.intro.title "lede" .Params.intro.body) }}
                 <ul class="service-list">
-                    {{ range .Params.intro.bullets }}
+                    {{ range $introBullets }}
                     <li>{{ . }}</li>
                     {{ end }}
                 </ul>
@@ -19,25 +21,15 @@
 
     <section class="section">
         <div class="section__inner">
-            <h2 class="section__title">{{ .Params.packages.title }}</h2>
+            {{ partial "components/section-heading.html" (dict "title" .Params.packages.title) }}
             <div class="flower-row">
                 <img src="/images/brand-flower-navy.png" alt="Flower icon">
                 <img src="/images/brand-flower-teal.png" alt="Flower icon">
                 <img src="/images/brand-flower-green.png" alt="Flower icon">
             </div>
             <div class="package-grid">
-                {{ range .Params.packages.items }}
-                <div class="package package--{{ .tone }}">
-                    <div class="package__title">{{ .name }}</div>
-                    <ul class="service-list">
-                        {{ range .details }}
-                        <li>{{ . }}</li>
-                        {{ end }}
-                    </ul>
-                    {{ if .price }}
-                    <div class="package__price">{{ .price }}</div>
-                    {{ end }}
-                </div>
+                {{ range $packageItems }}
+                {{ partial "components/package-card.html" . }}
                 {{ end }}
             </div>
         </div>
@@ -45,14 +37,13 @@
 
     <section class="section section--tight">
         <div class="section__inner">
-            <h2 class="section__title">{{ .Params.insurance.title }}</h2>
-            <p class="section__lede">{{ .Params.insurance.body }}</p>
+            {{ partial "components/section-heading.html" (dict "title" .Params.insurance.title "lede" .Params.insurance.body) }}
         </div>
     </section>
 
     <section class="section">
         <div class="section__inner">
-            <h2 class="section__title">{{ .Params.contact.title }}</h2>
+            {{ partial "components/section-heading.html" (dict "title" .Params.contact.title) }}
             <form class="card">
                 <div class="form-grid">
                     <input type="text" name="name" placeholder="Name" />

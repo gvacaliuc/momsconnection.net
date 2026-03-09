@@ -1,0 +1,11 @@
+<div class="package package--{{ .tone }}">
+    <div class="package__title">{{ .name }}</div>
+    <ul class="service-list">
+        {{ range .details }}
+        <li>{{ . }}</li>
+        {{ end }}
+    </ul>
+    {{ with .price }}
+    <div class="package__price">{{ . }}</div>
+    {{ end }}
+</div>

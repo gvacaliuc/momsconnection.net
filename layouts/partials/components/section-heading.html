@@ -1,0 +1,13 @@
+{{ $tag := default "h2" .tag }}
+{{ $title := .title }}
+{{ $lede := .lede }}
+
+{{ if eq $tag "h3" }}
+<h3 class="section__title">{{ $title }}</h3>
+{{ else }}
+<h2 class="section__title">{{ $title }}</h2>
+{{ end }}
+
+{{ with $lede }}
+<p class="section__lede">{{ . }}</p>
+{{ end }}
