@@ -3,12 +3,12 @@
 {{ $introBullets := default $servicesData.intro_bullets .Params.intro.bullets }}
 {{ $packageItems := default $servicesData.package_items .Params.packages.items }}
 <div class="page">
-    <section class="section">
-        <div class="section__inner services-grid">
+    <section class="section services-intro">
+        <div class="section__inner services-grid services-grid--intro">
             <div class="media">
                 <img src="{{ .Params.intro.image | relURL }}" alt="{{ .Params.intro.imageAlt }}">
             </div>
-            <div>
+            <div class="services-intro__text">
                 {{ partial "components/section-heading.html" (dict "title" .Params.intro.title "lede" .Params.intro.body) }}
                 <ul class="service-list">
                     {{ range $introBullets }}
@@ -22,7 +22,7 @@
     <section class="section">
         <div class="section__inner">
             {{ partial "components/section-heading.html" (dict "title" .Params.packages.title) }}
-            <div class="flower-row">
+            <div class="flower-row services-packages__flowers">
                 <img src="/images/brand-flower-navy.png" alt="Flower icon">
                 <img src="/images/brand-flower-teal.png" alt="Flower icon">
                 <img src="/images/brand-flower-green.png" alt="Flower icon">
