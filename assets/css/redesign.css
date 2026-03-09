@@ -941,6 +941,16 @@ button {
     padding-bottom: 24px;
   }
 
+  .my-story__intro-text {
+    padding-top: 0;
+  }
+
+  .my-story__flower-sprite {
+    position: static;
+    width: 120px;
+    margin: 0 0 12px;
+  }
+
   .mission {
     text-align: left;
   }
