@@ -845,6 +845,18 @@ button {
     padding-top: 24px;
   }
 
+  .mission {
+    text-align: left;
+  }
+
+  .mission .section__title {
+    text-align: left;
+  }
+
+  .mission__text {
+    margin: 0;
+  }
+
   .services-grid--intro {
     gap: 14px;
   }
