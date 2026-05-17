@@ -1,0 +1,58 @@
+{{ define "main" }}
+<div class="page my-story">
+    <section class="section">
+        <div class="section__inner split section-divider intro-divider my-story__intro">
+            <div class="media media--square">
+                <img src="{{ .Params.intro.image | relURL }}" alt="{{ .Params.intro.imageAlt }}">
+            </div>
+            <div class="my-story__intro-text">
+                <svg class="my-story__flower-sprite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 210" aria-hidden="true">
+                    <image href="/images/brand-flower-navy.png" x="0" y="55" width="80" height="80" preserveAspectRatio="xMidYMid meet" />
+                    <image href="/images/brand-flower-lavender.png" x="80" y="0" width="160" height="130" preserveAspectRatio="xMidYMid meet" />
+                    <image href="/images/brand-flower-green.png" x="178" y="132" width="60" height="60" preserveAspectRatio="xMidYMid meet" />
+                </svg>
+                <h2 class="section__title">
+                    <span class="intro-title-line">{{ .Params.intro.title }}</span>
+                    <span class="intro-title-line">{{ .Params.intro.name }}</span>
+                </h2>
+                <p class="section__lede">{{ .Params.intro.body }}</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--tight">
+        <div class="section__inner my-story__credential">
+            <div class="my-story__credential-copy">
+                <h2 class="section__title">{{ .Params.history.title }}</h2>
+                <p class="section__lede">{{ .Params.history.body }}</p>
+            </div>
+            <div class="my-story__credential-badge">
+                <img src="/images/connecting-families-through-birth-logo.jpg" alt="Connecting Families Through Birth">
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--tight">
+        <div class="section__inner section-divider my-story__credential">
+            <div class="my-story__credential-copy">
+                <h2 class="section__title">{{ .Params.dona.title }}</h2>
+                <p class="section__lede">{{ .Params.dona.body }}</p>
+            </div>
+            <div class="my-story__credential-badge">
+                <img src="/images/badge-dona-certified-black.png" alt="DONA International Certified Birth Doula">
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section__inner">
+            <h2 class="section__title">{{ .Params.clients.title }}</h2>
+            <div class="clients-frame">
+                <img src="{{ .Params.clients.image | relURL }}" alt="{{ .Params.clients.imageAlt }}">
+                <span class="clients-frame__arrow clients-frame__arrow--left">‹</span>
+                <span class="clients-frame__arrow clients-frame__arrow--right">›</span>
+            </div>
+        </div>
+    </section>
+</div>
+{{ end }}

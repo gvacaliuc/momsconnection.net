@@ -1,0 +1,1 @@
+const header=document.querySelector("header");function paddingHeader(){document.body.style.paddingTop=`${header.offsetHeight}px`}function cleanForm(){document.getElementById("contact-form").reset()}

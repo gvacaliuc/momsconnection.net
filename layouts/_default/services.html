@@ -1,0 +1,87 @@
+{{ define "main" }}
+{{ $servicesData := site.Data.services }}
+{{ $introBullets := default (index $servicesData "intro_bullets") .Params.intro.bullets }}
+{{ $packageItems := default (index $servicesData "package_items") .Params.packages.items }}
+<div class="page services-page">
+    <section class="section services-intro">
+        <div class="section__inner">
+            <div class="services-intro__copy">
+                {{ partial "components/section-heading.html" (dict "title" .Params.intro.title "lede" .Params.intro.body) }}
+            </div>
+
+            <div class="services-intro__details">
+                <div class="media services-intro__media">
+                    <img src="{{ .Params.intro.image | relURL }}" alt="{{ .Params.intro.imageAlt }}">
+                </div>
+                <div class="services-intro__support">
+                    <div class="services-intro__support-head">
+                        <h3 class="services-intro__support-title">Our birth support includes:</h3>
+                    </div>
+                    <ul class="service-list">
+                        {{ range $introBullets }}
+                        <li>{{ . }}</li>
+                        {{ end }}
+                    </ul>
+                    <p class="section__lede services-intro__note">We are well-acquainted with local hospitals and birth options and are ready to help you navigate them. We look forward to walking alongside your family every step of the way!</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section section--tight">
+        <div class="section__inner">
+            {{ partial "components/section-heading.html" (dict "title" .Params.packages.title) }}
+            <div class="flower-row services-packages__flowers">
+                <img src="/images/brand-flower-navy.png" alt="Flower icon">
+                <img src="/images/brand-flower-teal.png" alt="Flower icon">
+                <img src="/images/brand-flower-green.png" alt="Flower icon">
+            </div>
+            <div class="package-grid">
+                {{ range $packageItems }}
+                {{ partial "components/package-card.html" . }}
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--tight">
+        <div class="section__inner services-insurance">
+            {{ partial "components/section-heading.html" (dict "title" .Params.insurance.title "lede" .Params.insurance.body) }}
+        </div>
+    </section>
+
+    <section class="section section--tight services-contact">
+        <div class="section__inner">
+            {{ partial "components/section-heading.html" (dict "title" .Params.contact.title) }}
+            <form class="card services-contact__card">
+                <div class="form-grid">
+                    <label class="form-field">
+                        <span class="form-field__label">Name</span>
+                        <input type="text" name="name" />
+                    </label>
+                    <label class="form-field">
+                        <span class="form-field__label">Phone</span>
+                        <input type="text" name="phone" />
+                    </label>
+                    <label class="form-field">
+                        <span class="form-field__label">Email</span>
+                        <input type="email" name="email" />
+                    </label>
+                    <label class="form-field">
+                        <span class="form-field__label">Due Date</span>
+                        <input type="text" name="date" />
+                    </label>
+                    <label class="form-field form-field--full">
+                        <span class="form-field__label">Message</span>
+                        <textarea name="message"></textarea>
+                    </label>
+                </div>
+                <div style="text-align:center; margin-top: 16px;">
+                    <button type="submit">Send</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
+{{ end }}

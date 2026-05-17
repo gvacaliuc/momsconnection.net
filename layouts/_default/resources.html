@@ -1,0 +1,78 @@
+{{ define "main" }}
+{{ $resourcesData := site.Data.resources }}
+{{ $appsItems := default $resourcesData.apps_items .Params.apps.items }}
+{{ $supportLinks := default $resourcesData.support_links .Params.support.links }}
+{{ $articleItems := default $resourcesData.article_items .Params.articles.items }}
+{{ $poemItems := default $resourcesData.poem_items .Params.poems.items }}
+<div class="page resources-page">
+    <section class="section">
+        <div class="section__inner">
+            {{ partial "components/section-heading.html" (dict "title" .Params.apps.title) }}
+            <p class="section__lede resources-section-lede">A few practical apps families often use during late pregnancy and labor.</p>
+            <div class="apps-grid">
+                {{ range $appsItems }}
+                {{ partial "components/app-card.html" . }}
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--tight">
+        <div class="section__inner resources-grid">
+            <div class="media resources-support-media">
+                <img src="{{ .Params.support.image | relURL }}" alt="{{ .Params.support.imageAlt }}">
+            </div>
+            <div>
+                {{ partial "components/section-heading.html" (dict "tag" "h3" "title" .Params.support.title "lede" .Params.support.body) }}
+                <div class="resource-link-list">
+                    {{ range $supportLinks }}
+                    <div class="resource-link-item">
+                        <a href="{{ .url }}" target="_blank" rel="noopener">{{ .label }}</a>
+                        {{ with .body }}
+                        <p>{{ . }}</p>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </div>
+
+                <h3 class="section__title" style="margin-top: 24px;">{{ .Params.articles.title }}</h3>
+                <div class="reading-list">
+                    {{ range $articleItems }}
+                    <div class="reading-list__item">
+                        <a href="{{ .url }}" target="_blank" rel="noopener">{{ .label }}</a>
+                        {{ with .author }}
+                        <span>{{ . }}</span>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section__inner">
+            {{ partial "components/section-heading.html" (dict "title" .Params.poems.title "lede" .Params.poems.body) }}
+            <div class="reading-list">
+                {{ range $poemItems }}
+                <div class="reading-list__item{{ with .image }} reading-list__item--with-thumb{{ end }}">
+                    {{ $imageAlt := .image_alt }}
+                    {{ with .image }}
+                    <img class="reading-list__thumb" src="{{ . | relURL }}" alt="{{ $imageAlt }}">
+                    {{ end }}
+                    <div>
+                    {{ $title := .title }}
+                    {{ with .url }}
+                    <a href="{{ . }}" target="_blank" rel="noopener">{{ $title }}</a>
+                    {{ else }}
+                    <strong>{{ .title }}</strong>
+                    {{ end }}
+                    <span>{{ .author }}</span>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+</div>
+{{ end }}

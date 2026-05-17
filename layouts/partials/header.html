@@ -1,17 +1,38 @@
-<header class="header">
-    <div class="header__title">
-        <a href="{{ $.Site.BaseURL }}" class="header__title__link" alt="Home">
+<header class="site-header">
+    <div class="site-header__inner">
+        <a href="{{ $.Site.BaseURL }}" class="brand brand--logo" aria-label="{{ $.Site.Title }}">
             {{ if $.Site.Params.logo }}
-            <img src="{{ $.Site.BaseURL }}{{ $.Site.Params.logo }}" class="header__title__logo" alt="{{ $.Site.Title }}">
-            <div class="header__title__text">
-              <span style="white-space:nowrap;">Mom's Connection</span> <span style="white-space:nowrap;">Doula Services</span>
-            </div>
-            {{ else }}
-            {{ $.Site.Title }}
+            <img src="{{ $.Site.BaseURL }}{{ $.Site.Params.logo }}" class="brand__logo" alt="{{ $.Site.Title }}">
             {{ end }}
         </a>
-    </div>
 
-    {{ partial "menu.html" . }}
-    {{ partial "hamburger-menu.html" . }}
+        <nav class="site-nav site-nav--desktop" aria-label="Primary">
+            <ul class="site-nav__list">
+                {{ range $.Site.Menus.main }}
+                <li class="site-nav__item">
+                    <a class="site-nav__link{{ if $.Page.IsMenuCurrent "main" . }} is-active{{ end }}" href="{{ .URL }}">
+                        {{ .Name | default .Title }}
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </nav>
+
+        <details class="mobile-nav">
+            <summary class="mobile-nav__summary" aria-label="Open menu">
+                <span class="mobile-nav__icon" aria-hidden="true"></span>
+            </summary>
+            <nav class="site-nav site-nav--mobile" aria-label="Mobile Primary">
+                <ul class="site-nav__list site-nav__list--mobile">
+                    {{ range $.Site.Menus.main }}
+                    <li class="site-nav__item">
+                        <a class="site-nav__link site-nav__link--mobile{{ if $.Page.IsMenuCurrent "main" . }} is-active{{ end }}" href="{{ .URL }}">
+                            {{ .Name | default .Title }}
+                        </a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </nav>
+        </details>
+    </div>
 </header>

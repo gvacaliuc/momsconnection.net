@@ -1,0 +1,22 @@
+<footer class="site-footer">
+    <div class="site-footer__inner">
+        <div class="site-footer__contact">
+            {{ if $.Site.Params.contact.email }}
+            <a href="mailto:{{ $.Site.Params.contact.email }}" class="site-footer__link">
+                {{ $.Site.Params.contact.email }}
+            </a>
+            {{ end }}
+            {{ if $.Site.Params.contact.phone }}
+            <a href="tel:{{ $.Site.Params.contact.phone }}" class="site-footer__link">
+                {{ $.Site.Params.contact.phone }}
+            </a>
+            {{ end }}
+        </div>
+
+        <div class="site-footer__brand">
+            {{ if $.Site.Params.logo }}
+            <img src="{{ $.Site.BaseURL }}{{ $.Site.Params.logo }}" class="site-footer__logo" alt="{{ $.Site.Title }}">
+            {{ end }}
+        </div>
+    </div>
+</footer>

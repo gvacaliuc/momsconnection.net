@@ -1,0 +1,37 @@
+{{ define "main" }}
+<div class="page">
+    <section class="hero">
+        <div class="hero__image" style="background-image: url('{{ .Params.hero.image | relURL }}');">
+            <h1 class="hero__title">{{ .Params.hero.title }}</h1>
+        </div>
+    </section>
+
+    <section class="section mission">
+        <div class="section__inner">
+            {{ partial "components/section-heading.html" (dict "title" .Params.mission.title) }}
+            <p class="mission__text">{{ .Params.mission.body }}</p>
+        </div>
+    </section>
+
+    {{ partial "components/home-feature.html" (dict
+    "sectionClass" "section"
+    "title" .Params.whats.title
+    "body" .Params.whats.body
+    "image" .Params.whats.image
+    "imageAlt" .Params.whats.imageAlt
+    "mediaClass" "media--right"
+    "flowersTop" true
+    ) }}
+
+    {{ partial "components/home-feature.html" (dict
+    "sectionClass" "section section--tight"
+    "title" .Params.benefits.title
+    "body" .Params.benefits.body
+    "image" .Params.benefits.image
+    "imageAlt" .Params.benefits.imageAlt
+    "mediaClass" "media--left"
+    "imageFirst" true
+    "flowersBottom" true
+    ) }}
+</div>
+{{ end }}
