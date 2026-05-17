@@ -1,4 +1,11 @@
+{{ with .url }}
+<a class="app-card app-card--{{ $.tone }}" href="{{ . }}" target="_blank" rel="noopener">
+    <h3>{{ $.name }}</h3>
+    <p class="section__lede">{{ $.body }}</p>
+</a>
+{{ else }}
 <div class="app-card app-card--{{ .tone }}">
     <h3>{{ .name }}</h3>
     <p class="section__lede">{{ .body }}</p>
 </div>
+{{ end }}
