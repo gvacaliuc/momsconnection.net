@@ -18,7 +18,7 @@ packages:
   title: "Birth Doula Packages"
 insurance:
   title: "Health Insurance Coverage"
-  body: "There are a number of health insurance companies that cover birth doula services in their maternity care. Some of them are Tricare Prime, Tricare Select, and companies like BCBS, UHC, and WellCare. Check with your benefits manager or see if you qualify. If you have any questions, please reach out."
+  body: "There are a number of health insurance companies that cover birth doula services in their maternity care, including Tricare Prime, Tricare Select, and UHC. Check with your benefits manager to see if you qualify."
 contact:
   title: "Lets Connect"
 

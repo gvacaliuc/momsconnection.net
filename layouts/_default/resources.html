@@ -5,10 +5,26 @@
 {{ $articleItems := default $resourcesData.article_items .Params.articles.items }}
 {{ $poemItems := default $resourcesData.poem_items .Params.poems.items }}
 <div class="page resources-page">
-    <section class="section">
+    <section class="resources-hero">
+        <div class="section__inner resources-hero__inner">
+            <div class="resources-hero__copy">
+                <p class="resources-hero__eyebrow">{{ .Params.intro.eyebrow }}</p>
+                <h1>{{ .Params.intro.title }}</h1>
+                <p>{{ .Params.intro.body }}</p>
+            </div>
+            <img class="resources-hero__flowers" src="/images/brand-flowers-cluster.png" alt="" aria-hidden="true">
+        </div>
+    </section>
+
+    <section class="section resources-tools">
         <div class="section__inner">
-            {{ partial "components/section-heading.html" (dict "title" .Params.apps.title) }}
-            <p class="section__lede resources-section-lede">A few practical apps families often use during late pregnancy and labor.</p>
+            <div class="resources-section-heading">
+                <span class="resources-section-heading__number" aria-hidden="true">01</span>
+                <div>
+                    <h2 class="section__title">{{ .Params.apps.title }}</h2>
+                    <p class="section__lede">Practical tools families often use during late pregnancy and labor.</p>
+                </div>
+            </div>
             <div class="apps-grid">
                 {{ range $appsItems }}
                 {{ partial "components/app-card.html" . }}
@@ -17,60 +33,70 @@
         </div>
     </section>
 
-    <section class="section section--tight">
-        <div class="section__inner resources-grid">
+    <section class="section section--tight resources-support-section">
+        <div class="section__inner resources-support-layout">
             <div class="media resources-support-media">
-                <img src="{{ .Params.support.image | relURL }}" alt="{{ .Params.support.imageAlt }}">
+                <img src="{{ .Params.support.image | relURL }}" alt="{{ .Params.support.imageAlt }}" loading="lazy">
             </div>
-            <div>
-                {{ partial "components/section-heading.html" (dict "tag" "h3" "title" .Params.support.title "lede" .Params.support.body) }}
+            <div class="resources-support-content">
+                <div class="resources-section-heading">
+                    <span class="resources-section-heading__number" aria-hidden="true">02</span>
+                    <div>
+                        <h2 class="section__title">{{ .Params.support.title }}</h2>
+                        <p class="section__lede">{{ .Params.support.body }}</p>
+                    </div>
+                </div>
                 <div class="resource-link-list">
                     {{ range $supportLinks }}
-                    <div class="resource-link-item">
-                        <a href="{{ .url }}" target="_blank" rel="noopener">{{ .label }}</a>
-                        {{ with .body }}
-                        <p>{{ . }}</p>
-                        {{ end }}
-                    </div>
-                    {{ end }}
-                </div>
-
-                <h3 class="section__title" style="margin-top: 24px;">{{ .Params.articles.title }}</h3>
-                <div class="reading-list">
-                    {{ range $articleItems }}
-                    <div class="reading-list__item">
-                        <a href="{{ .url }}" target="_blank" rel="noopener">{{ .label }}</a>
-                        {{ with .author }}
-                        <span>{{ . }}</span>
-                        {{ end }}
-                    </div>
+                    <a class="resource-link-card" href="{{ .url }}" target="_blank" rel="noopener">
+                        <span class="resource-link-card__title">{{ .label }}</span>
+                        <span class="resource-link-card__body">{{ .body }}</span>
+                        <span class="resource-link-card__action">Visit resource <span aria-hidden="true">↗</span></span>
+                    </a>
                     {{ end }}
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section">
-        <div class="section__inner">
-            {{ partial "components/section-heading.html" (dict "title" .Params.poems.title "lede" .Params.poems.body) }}
-            <div class="reading-list">
-                {{ range $poemItems }}
-                <div class="reading-list__item{{ with .image }} reading-list__item--with-thumb{{ end }}">
-                    {{ $imageAlt := .image_alt }}
-                    {{ with .image }}
-                    <img class="reading-list__thumb" src="{{ . | relURL }}" alt="{{ $imageAlt }}">
-                    {{ end }}
+    <section class="section section--tight resources-reading-section">
+        <div class="section__inner resources-reading-layout">
+            <div class="resources-reading-column">
+                <div class="resources-section-heading">
+                    <span class="resources-section-heading__number" aria-hidden="true">03</span>
                     <div>
-                    {{ $title := .title }}
-                    {{ with .url }}
-                    <a href="{{ . }}" target="_blank" rel="noopener">{{ $title }}</a>
-                    {{ else }}
-                    <strong>{{ .title }}</strong>
-                    {{ end }}
-                    <span>{{ .author }}</span>
+                        <h2 class="section__title">{{ .Params.articles.title }}</h2>
+                        <p class="section__lede">Evidence-based information about continuous labor support and healthy birth outcomes.</p>
                     </div>
                 </div>
-                {{ end }}
+                <div class="reading-list reading-list--articles">
+                    {{ range $articleItems }}
+                    <a class="reading-list__item" href="{{ .url }}" target="_blank" rel="noopener">
+                        <strong>{{ .label }}</strong>
+                        <span>{{ .author }}</span>
+                        <span class="reading-list__arrow" aria-hidden="true">↗</span>
+                    </a>
+                    {{ end }}
+                </div>
+            </div>
+
+            <div class="resources-reading-column resources-poems">
+                <div class="resources-section-heading">
+                    <span class="resources-section-heading__number" aria-hidden="true">04</span>
+                    <div>
+                        <h2 class="section__title">{{ .Params.poems.title }}</h2>
+                        <p class="section__lede">{{ .Params.poems.body }}</p>
+                    </div>
+                </div>
+                <div class="poem-grid">
+                    {{ range $poemItems }}
+                    <a class="poem-card {{ .class }}" href="{{ .url }}" target="_blank" rel="noopener">
+                        <span class="poem-card__title">{{ .title }}</span>
+                        <span class="poem-card__author">{{ .author }}</span>
+                        <span class="poem-card__action">{{ .link_label }} <span aria-hidden="true">↗</span></span>
+                    </a>
+                    {{ end }}
+                </div>
             </div>
         </div>
     </section>

@@ -7,12 +7,8 @@ apps_items:
     tone: "teal"
     body: "Simple start/stop timer that calculates how far apart contractions are and how long they last."
     url: "https://contraction.app/"
-  - name: "Full Term"
-    tone: "lavender"
-    body: "A basic iOS contraction timer with a bright, easy-to-use interface and contraction history."
-    url: "https://www.fulltermapp.com/"
   - name: "Sprout Pregnancy"
-    tone: "stone"
+    tone: "lavender"
     body: "A pregnancy app with a kick counter and contraction timer built in."
     url: "https://sprout-apps.com/"
 

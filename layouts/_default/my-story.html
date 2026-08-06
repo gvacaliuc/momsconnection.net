@@ -44,13 +44,16 @@
         </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="client-stories">
         <div class="section__inner">
             <h2 class="section__title">{{ .Params.clients.title }}</h2>
-            <div class="clients-frame">
-                <img src="{{ .Params.clients.image | relURL }}" alt="{{ .Params.clients.imageAlt }}">
-                <span class="clients-frame__arrow clients-frame__arrow--left">‹</span>
-                <span class="clients-frame__arrow clients-frame__arrow--right">›</span>
+            <p class="section__lede clients-gallery__intro">{{ .Params.clients.intro }}</p>
+            <div class="clients-gallery">
+                {{ range .Params.clients.images }}
+                <figure class="clients-gallery__item">
+                    <img src="{{ .src | relURL }}" alt="{{ .alt }}" loading="lazy">
+                </figure>
+                {{ end }}
             </div>
         </div>
     </section>
