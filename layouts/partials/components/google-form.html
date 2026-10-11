@@ -1,9 +1,10 @@
 {{- $form := .form -}}
 {{- $formKey := default "google-form" $form.key -}}
 {{- $formId := printf "%s-form" $formKey -}}
+{{- $frameName := printf "%s-response" $formKey -}}
 <div class="card google-form__card">
     {{ with .intro }}<p class="google-form__intro">{{ . }}</p>{{ end }}
-    <form id="{{ $formId }}" class="google-form" autocomplete="on" action="https://docs.google.com/forms/d/e/{{ $form.form_id }}/formResponse" method="post">
+    <form id="{{ $formId }}" class="google-form" autocomplete="on" action="https://docs.google.com/forms/d/e/{{ $form.form_id }}/formResponse" method="post" target="{{ $frameName }}">
         <div class="form-grid">
             {{ range $form.fields }}
             {{ $fieldId := printf "%s-%s" $formKey .name }}
@@ -25,12 +26,14 @@
         </div>
         <p class="google-form__status" role="status" aria-live="polite"></p>
     </form>
+    <iframe class="google-form__response-frame" name="{{ $frameName }}" title="Form submission response" tabindex="-1"></iframe>
 </div>
 <script>
 (() => {
     const container = document.currentScript.previousElementSibling;
     const form = container && container.querySelector('form.google-form');
-    if (!form) return;
+    const frame = container && container.querySelector('iframe.google-form__response-frame');
+    if (!form || !frame) return;
     const button = form.querySelector('button[type="submit"]');
     const status = form.querySelector('.google-form__status');
     let awaitingResponse = false;
@@ -72,11 +75,19 @@
         }
         awaitingResponse = true;
         button.disabled = true;
-        status.textContent = 'Submitting securely to Google…';
+        status.textContent = 'Sending…';
         window.setTimeout(() => {
             if (!awaitingResponse) return;
-            status.textContent = 'This is taking longer than expected. Please keep this page open and do not submit again.';
+            status.textContent = 'Your submission may have gone through, but we could not confirm it. Please contact Karen before trying again.';
         }, 30000);
+    });
+
+    frame.addEventListener('load', () => {
+        if (!awaitingResponse) return;
+        awaitingResponse = false;
+        button.disabled = false;
+        form.reset();
+        status.textContent = 'Thanks! Your message has been sent. Karen will get back to you soon.';
     });
 })();
 </script>

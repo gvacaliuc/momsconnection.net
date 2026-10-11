@@ -673,6 +673,10 @@ a {
   display: none;
 }
 
+.google-form__response-frame {
+  display: none;
+}
+
 .services-contact .section__title {
   margin-bottom: 6px;
 }
