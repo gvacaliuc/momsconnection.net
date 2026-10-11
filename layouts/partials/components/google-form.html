@@ -2,9 +2,10 @@
 {{- $formKey := default "google-form" $form.key -}}
 {{- $formId := printf "%s-form" $formKey -}}
 {{- $frameName := printf "%s-response" $formKey -}}
+{{- $successMessage := default "Thanks! We'll be in touch soon." .success_message -}}
 <div class="card google-form__card">
     {{ with .intro }}<p class="google-form__intro">{{ . }}</p>{{ end }}
-    <form id="{{ $formId }}" class="google-form" autocomplete="on" action="https://docs.google.com/forms/d/e/{{ $form.form_id }}/formResponse" method="post" target="{{ $frameName }}">
+    <form id="{{ $formId }}" class="google-form" autocomplete="on" data-success-message="{{ $successMessage }}" action="https://docs.google.com/forms/d/e/{{ $form.form_id }}/formResponse" method="post" target="{{ $frameName }}">
         <div class="form-grid">
             {{ range $form.fields }}
             {{ $fieldId := printf "%s-%s" $formKey .name }}
@@ -15,9 +16,8 @@
                 {{ if eq .type "textarea" }}
                 <textarea id="{{ $fieldId }}" name="entry.{{ .entry_id }}" rows="{{ default 4 .rows }}"{{ if .required }} required{{ end }}></textarea>
                 {{ else }}
-                <input id="{{ $fieldId }}" name="entry.{{ .entry_id }}" type="{{ .type }}"{{ with .autocomplete }} autocomplete="{{ . }}"{{ end }}{{ if eq .validation "phone" }} inputmode="tel" pattern="[+]?[0-9(). -]{7,24}" title="Enter a phone number using 7 to 15 digits." data-validation="phone"{{ end }}{{ if eq .validation "future_date" }} min="{{ now.Format "2006-01-02" }}" title="Choose a date after today." data-validation="future-date"{{ end }}{{ if .required }} required{{ end }}>
+                <input id="{{ $fieldId }}" name="entry.{{ .entry_id }}" type="{{ .type }}"{{ with .autocomplete }} autocomplete="{{ . }}"{{ end }}{{ if eq .validation "phone" }} inputmode="tel" pattern="[+]?[0-9(). -]{7,24}" title="Enter a phone number using 7 to 15 digits." data-validation="phone"{{ end }}{{ if eq .validation "future_date" }} min="{{ (now.AddDate 0 0 1).Format "2006-01-02" }}" data-validation="future-date"{{ end }}{{ if .required }} required{{ end }}>
                 {{ end }}
-                {{ with .help_text }}<span class="form-field__help">{{ . }}</span>{{ end }}
             </div>
             {{ end }}
         </div>
@@ -26,7 +26,7 @@
         </div>
         <p class="google-form__status" role="status" aria-live="polite"></p>
     </form>
-    <iframe class="google-form__response-frame" name="{{ $frameName }}" title="Form submission response" tabindex="-1"></iframe>
+    <iframe class="google-form__response-frame" name="{{ $frameName }}" title="Form submission response" tabindex="-1" hidden aria-hidden="true"></iframe>
 </div>
 <script>
 (() => {
@@ -58,14 +58,6 @@
             String(tomorrow.getDate()).padStart(2, '0')
         ].join('-');
         input.min = minDate;
-
-        const validateFutureDate = () => {
-            input.setCustomValidity(input.value && input.value < input.min
-                ? 'Please choose a date after today.'
-                : '');
-        };
-        input.addEventListener('input', validateFutureDate);
-        input.addEventListener('change', validateFutureDate);
     });
 
     form.addEventListener('submit', (event) => {
@@ -87,7 +79,7 @@
         awaitingResponse = false;
         button.disabled = false;
         form.reset();
-        status.textContent = 'Thanks! Your message has been sent. Karen will get back to you soon.';
+        status.textContent = form.dataset.successMessage;
     });
 })();
 </script>

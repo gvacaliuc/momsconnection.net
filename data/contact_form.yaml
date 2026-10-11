@@ -25,7 +25,6 @@ fields:
     label: Due date
     type: date
     validation: future_date
-    help_text: Please choose a date after today.
     required: false
   - entry_id: 40119918
     name: message

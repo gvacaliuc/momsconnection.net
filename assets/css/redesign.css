@@ -620,11 +620,6 @@ a {
   color: var(--ink-soft);
 }
 
-.form-field__help {
-  font-size: 0.8rem;
-  color: var(--ink-soft);
-}
-
 .google-form input[type="date"] {
   min-height: 44px;
   cursor: pointer;
@@ -675,6 +670,10 @@ a {
 
 .google-form__response-frame {
   display: none;
+}
+
+.google-form__response-frame[hidden] {
+  display: none !important;
 }
 
 .services-contact .section__title {
