@@ -1,0 +1,82 @@
+{{- $form := .form -}}
+{{- $formKey := default "google-form" $form.key -}}
+{{- $formId := printf "%s-form" $formKey -}}
+<div class="card google-form__card">
+    {{ with .intro }}<p class="google-form__intro">{{ . }}</p>{{ end }}
+    <form id="{{ $formId }}" class="google-form" autocomplete="on" action="https://docs.google.com/forms/d/e/{{ $form.form_id }}/formResponse" method="post">
+        <div class="form-grid">
+            {{ range $form.fields }}
+            {{ $fieldId := printf "%s-%s" $formKey .name }}
+            <div class="form-field{{ if .full_width }} form-field--full{{ end }}">
+                <label class="form-field__label" for="{{ $fieldId }}">
+                    {{ .label }}{{ if not .required }} <span class="form-field__optional">(optional)</span>{{ end }}
+                </label>
+                {{ if eq .type "textarea" }}
+                <textarea id="{{ $fieldId }}" name="entry.{{ .entry_id }}" rows="{{ default 4 .rows }}"{{ if .required }} required{{ end }}></textarea>
+                {{ else }}
+                <input id="{{ $fieldId }}" name="entry.{{ .entry_id }}" type="{{ .type }}"{{ with .autocomplete }} autocomplete="{{ . }}"{{ end }}{{ if eq .validation "phone" }} inputmode="tel" pattern="[+]?[0-9(). -]{7,24}" title="Enter a phone number using 7 to 15 digits." data-validation="phone"{{ end }}{{ if eq .validation "future_date" }} min="{{ now.Format "2006-01-02" }}" title="Choose a date after today." data-validation="future-date"{{ end }}{{ if .required }} required{{ end }}>
+                {{ end }}
+                {{ with .help_text }}<span class="form-field__help">{{ . }}</span>{{ end }}
+            </div>
+            {{ end }}
+        </div>
+        <div class="google-form__submit">
+            <button type="submit">{{ default "Submit" $.submit_label }}</button>
+        </div>
+        <p class="google-form__status" role="status" aria-live="polite"></p>
+    </form>
+</div>
+<script>
+(() => {
+    const container = document.currentScript.previousElementSibling;
+    const form = container && container.querySelector('form.google-form');
+    if (!form) return;
+    const button = form.querySelector('button[type="submit"]');
+    const status = form.querySelector('.google-form__status');
+    let awaitingResponse = false;
+
+    form.querySelectorAll('[data-validation="phone"]').forEach((input) => {
+        const validatePhone = () => {
+            const digits = input.value.replace(/\D/g, '').length;
+            input.setCustomValidity(input.value && (digits < 7 || digits > 15)
+                ? 'Enter a phone number using 7 to 15 digits.'
+                : '');
+        };
+        input.addEventListener('input', validatePhone);
+        input.addEventListener('change', validatePhone);
+    });
+
+    form.querySelectorAll('[data-validation="future-date"]').forEach((input) => {
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        const minDate = [
+            tomorrow.getFullYear(),
+            String(tomorrow.getMonth() + 1).padStart(2, '0'),
+            String(tomorrow.getDate()).padStart(2, '0')
+        ].join('-');
+        input.min = minDate;
+
+        const validateFutureDate = () => {
+            input.setCustomValidity(input.value && input.value < input.min
+                ? 'Please choose a date after today.'
+                : '');
+        };
+        input.addEventListener('input', validateFutureDate);
+        input.addEventListener('change', validateFutureDate);
+    });
+
+    form.addEventListener('submit', (event) => {
+        if (awaitingResponse) {
+            event.preventDefault();
+            return;
+        }
+        awaitingResponse = true;
+        button.disabled = true;
+        status.textContent = 'Submitting securely to Google…';
+        window.setTimeout(() => {
+            if (!awaitingResponse) return;
+            status.textContent = 'This is taking longer than expected. Please keep this page open and do not submit again.';
+        }, 30000);
+    });
+})();
+</script>

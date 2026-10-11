@@ -594,8 +594,83 @@ a {
   max-width: 90ch;
 }
 
-.services-contact__card {
+.google-form__card {
   padding: 16px;
+}
+
+.google-form__intro {
+  max-width: 70ch;
+  margin: 0 auto 12px;
+  text-align: center;
+  color: var(--ink-soft);
+}
+
+.google-form {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.google-form .form-field__label {
+  font-size: 0.9rem;
+  color: var(--ink);
+}
+
+.form-field__optional {
+  font-weight: 400;
+  color: var(--ink-soft);
+}
+
+.form-field__help {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+.google-form input[type="date"] {
+  min-height: 44px;
+  cursor: pointer;
+}
+
+.google-form input,
+.google-form textarea {
+  background: #fff;
+  color: var(--ink);
+}
+
+.google-form input:focus,
+.google-form textarea:focus {
+  outline: 3px solid rgba(47, 107, 134, 0.18);
+  border-color: var(--brand);
+}
+
+.google-form__submit {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.google-form button {
+  min-width: 140px;
+  font-weight: 700;
+  background: var(--brand);
+  color: #fff;
+}
+
+.google-form button:hover {
+  background: var(--brand-dark);
+}
+
+.google-form button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.google-form__status {
+  margin: 12px 0 0;
+  text-align: center;
+  color: var(--brand-dark);
+}
+
+.google-form__status:empty {
+  display: none;
 }
 
 .services-contact .section__title {
@@ -633,16 +708,6 @@ a {
 .package__price {
   margin-top: 10px;
   text-align: right;
-}
-
-.services-contact button {
-  min-width: 88px;
-  font-weight: 700;
-  background: #bfaedb;
-}
-
-.services-contact button:hover {
-  background: #b29fce;
 }
 
 .service-list {
@@ -1249,7 +1314,7 @@ a.app-card:focus-visible {
     margin-bottom: 4px;
   }
 
-  .services-contact__card {
+  .google-form__card {
     padding: 10px;
   }
 

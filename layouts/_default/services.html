@@ -54,33 +54,11 @@
     <section class="section section--tight services-contact">
         <div class="section__inner">
             {{ partial "components/section-heading.html" (dict "title" .Params.contact.title) }}
-            <form class="card services-contact__card">
-                <div class="form-grid">
-                    <label class="form-field">
-                        <span class="form-field__label">Name</span>
-                        <input type="text" name="name" />
-                    </label>
-                    <label class="form-field">
-                        <span class="form-field__label">Phone</span>
-                        <input type="text" name="phone" />
-                    </label>
-                    <label class="form-field">
-                        <span class="form-field__label">Email</span>
-                        <input type="email" name="email" />
-                    </label>
-                    <label class="form-field">
-                        <span class="form-field__label">Due Date</span>
-                        <input type="text" name="date" />
-                    </label>
-                    <label class="form-field form-field--full">
-                        <span class="form-field__label">Message</span>
-                        <textarea name="message"></textarea>
-                    </label>
-                </div>
-                <div style="text-align:center; margin-top: 16px;">
-                    <button type="submit">Send</button>
-                </div>
-            </form>
+            {{ partial "components/google-form.html" (dict
+                "form" site.Data.contact_form
+                "intro" "Share a few details below and Karen will get back to you soon."
+                "submit_label" "Send message"
+            ) }}
         </div>
     </section>
 </div>
