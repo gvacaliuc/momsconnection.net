@@ -9,7 +9,7 @@ hero:
   image: "/images/pregnant-belly.jpg"
 mission:
   title: "Our Mission"
-  body: "Mom’s Connection seeks to empower birthing people through positive pregnancy, labor, and childbirth experiences. Through empowerment and support we encourage birthing parents to advocate and educate themselves about all their birth and pregnancy options to create a plan tailored to the parent’s needs."
+  body: "Mom’s Connection seeks to empower parents through positive pregnancy, labor, and childbirth experiences. Through empowerment and support we encourage parents to advocate and educate themselves about all their birth and pregnancy options to create a plan tailored to their needs."
 whats:
   title: "What’s A Doula?"
   body: "A doula is a trained professional who provides continuous physical, emotional and informational support to a mother before, during and shortly after childbirth to help them achieve the healthiest, most satisfying experience possible."
